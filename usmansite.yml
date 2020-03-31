@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name:static-website
-        image: usmansite:latest
+        image: kubernetes-static-website:latest
         imagePullPolicy: Never
         ports:
         - containerPort: 80
