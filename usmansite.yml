@@ -16,7 +16,7 @@ spec:
         tier: web
     spec:
       containers:
-      - name: hello-app
-        image: mainusman
+      - name: usmansite
+        image: gcr.io/google-samples/hello-app:1.0
         ports:
         - containerPort: 8080
