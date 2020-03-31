@@ -1,20 +1,22 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: usmansite
+  labels:
+    app: hello
 spec:
   selector:
-   matchLabels:
-     app:static-website
-  replicas: 1
+    matchLabels:
+      app: hello
+      tier: web
   template:
     metadata:
       labels:
-        app:static-website
+        app: hello
+        tier: web
     spec:
       containers:
-      - name:static-website
-        image: kubernetes-static-website:latest
-        imagePullPolicy: Never
+      - name: hello-app
+        image:
         ports:
-        - containerPort: 80
+        - containerPort: 8080
