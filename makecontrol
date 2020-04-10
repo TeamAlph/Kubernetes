@@ -11,6 +11,6 @@ spec:
     spec:
       containers:
       - name: my-apache-container1
-        image: httpd
+        image: Kubernetes 
         ports:
         - containerPort: 80
